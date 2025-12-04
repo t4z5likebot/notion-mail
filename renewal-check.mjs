@@ -107,13 +107,13 @@ async function sendReminder(email, endDate, name) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: "续期提醒 <qwq@355232.xyz>", // 如需改发件人，请同步修改这里
+      from: "Notion续期提醒 <qwq@355232.xyz>", // 如需改发件人，请同步修改这里
       to: email,
       subject: `您的套餐将于 ${endDate} 到期，请及时续订`,
       html: `
         <p>您好，${displayName}：</p>
         <p>您的套餐将于 <b>${endDate}</b> 到期。</p>
-        <p>如需续期，请尽快联系客服或进入购买页面。</p>
+        <p>如需续期，请尽快联系客服或进入购买页面。 <a href="https://www.goofish.com/personal?spm=a21ybx">戳我进行购买续期</a></p>
         <p>感谢您的使用！</p>
       `,
     }),
